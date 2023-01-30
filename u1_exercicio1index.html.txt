@@ -1,0 +1,29 @@
+<HTML>
+ <HEAD>
+  <TITLE>EXERCÍCIO 1</TITLE>
+ </HEAD>
+
+<BODY>
+    <h1>Uma manchete em H1</h1>
+    <h2>Uma manchete em H2</h2>
+    <h3>Uma manchete em H3</h3>
+    <h4>Uma manchete em H4</h4>
+    <p>Um paragrafo!</p>
+    <p>Outro paragrafo!</p>
+
+    <oL> Uma lista não ordenada:
+        <li>Pão
+        <li>Presunto
+        <li>Queijo
+    </OL>
+
+    <uL> Uma lista ordenada:
+        <li>Arroz
+        <li>Feijão
+        <li>Frango
+        <li>Batata
+    </UL>
+<codigoSecreto="744446030">
+</BODY>
+
+</HTML>
