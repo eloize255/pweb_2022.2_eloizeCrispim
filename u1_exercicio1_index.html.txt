@@ -11,18 +11,18 @@
     <p>Um paragrafo!</p>
     <p>Outro paragrafo!</p>
 
-    <oL> Uma lista não ordenada:
+    <UL> Uma lista não ordenada:
         <li>Pão
         <li>Presunto
         <li>Queijo
-    </OL>
+    </UL>
 
-    <uL> Uma lista ordenada:
+    <OL> Uma lista ordenada:
         <li>Arroz
         <li>Feijão
         <li>Frango
         <li>Batata
-    </UL>
+    </OL>
 <codigoSecreto="744446030">
 </BODY>
 
