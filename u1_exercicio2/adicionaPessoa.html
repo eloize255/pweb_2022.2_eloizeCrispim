@@ -10,6 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+
+    <style>
+        .grid{
+         text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="w3-container">
@@ -23,17 +29,17 @@
           </div>
     </div> 
 
-    <form method="get" action="resposta.html">
+    <form method="get" action="file:///C:/Users/Eloize/OneDrive/Documentos/GitHub/pweb_2022.2_eloizeCrispim/u1_exercicio2/adicionadaComSucesso.html">
         <h1><b>Formulário para Adiconar Pessoas:</b><h1>
-        <label for="nome">Nome:</label>
+        <div class="grid">    
+        <label for="nome"><div>Nome:</div></label>
         <input type="text" id="nome"/>
-        <br>
-        <label for="e-mail">e-mail:</label>
+        <label for="e-mail"><div>e-mail:</div></label>
         <input type="text" id="e-mail"/>
-        <legend>Nunca divulgaremos :)</legend>
-        <br>
-        <label for="data">Data de Nascimento:</label>
+        <label for="data"><div>Data de Nascimento:</div></label>
         <input type="date" id="data"/>
+        </div>
+        <p align="center">Nunca Divulgaremos :)</p>
         <br>
          <Legend>Genêro:</Legend>
         <input type="radio" name="sexo" value="Masculino">
@@ -45,9 +51,10 @@
         <input type="radio" name="sexo" value="naoinfo">
         <label for="naoinfo">Não Informar</label>
         <br>
-
-        <input type="submit" value="Adicionar"/>
-        <input type="reset" value="Limpar"/>
+        <div class="grid">
+            <div><input type="submit" value="Adicionar"/></div>
+            <div> <input type="reset" value="Limpar"/></div> 
+          </div>
  </form>
     
 </body>
