@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Pessoas</title>
+    <link rel="icon" type="image/x-ico" href="assets/favicon.ico">
+    <meta codigoSecreto="783118224">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+
+    <style>
+        .grid{
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container">
+        <div class="w3-bar w3-black w3-xlarge">
+            <a href="index.html" class="w3-bar-item w3-button w3-mobile">Inicio</a>
+            <a href="adicionaPessoa.html" class="w3-bar-item w3-button w3-mobile w3-pale-yellow">Adicionar Pessoa</a>
+            <a href="listaPessoas.html" class="w3-bar-item w3-button w3-mobile">Listar Pessoas</a>
+            <a href="contato.html" class="w3-bar-item w3-button w3-mobile w3-right">Contato</a>
+            <a href="sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">Sobre o site</a>
+            <a href="noticias.html" class="w3-bar-item w3-button w3-mobile w3-right">Notícias</a>
+          </div>
+    </div> 
+
+    <form method="get" action="adicionadaComSucesso.html">
+        <h1><b>Formulário para Adiconar Pessoas:</b><h1>
+        <div class="grid">    
+        <label for="nome"><div>Nome*:</div>
+            <input type="text" id="nome" placeholder="Nome Completo" required/>
+        </label>
+        <label for="e-mail"><div>e-mail*:</div>
+            <input type="text" id="e-mail" placeholder="nome@dominio.com" required/>
+            <small>Nunca Divulgaremos :)</small>
+        </label>
+        <label for="data"><div>Data de Nascimento*:</div>
+            <input type="date" id="data"/>
+        </label>
+        </div>
+        <br>
+         <Legend>Genêro*:</Legend>
+        <input type="radio" name="sexo" value="Masculino">
+        <label for="Masculino">Masculino</label>
+        <br>
+        <input type="radio" name="sexo" value="Feminino">
+        <label for="Feminino">Feminino</label>
+        <br>
+        <input type="radio" name="sexo" value="naoinfo">
+        <label for="naoinfo">Não Informar</label>
+        <br>
+        <div class="grid">
+            <div><input type="submit" value="Adicionar" required/></div>
+            <div> <input type="reset" value="Limpar"/></div> 
+          </div>
+ </form>
+    
+</body>
+</html>
