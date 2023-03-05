@@ -26,11 +26,11 @@ public class PessoaController {
         return "index.html";
     }
     
-    @GetMapping("/listarPessoas")
-    public ModelAndView listarPessoas(){
+    @GetMapping("/listaPessoas")
+    public ModelAndView listaPessoas(){
         List<Pessoa> todasAsPessoas = pessoaRepo.findAll();
-        ModelAndView modelAndView = new ModelAndView("listarPessoas");
+        ModelAndView modelAndView = new ModelAndView("listaPessoas");
         ModelAndView.addObject("todasAsPessoas", todasAsPessoas); 
-        return ModelAndView; 
+        return modelAndView; 
     }
 }

@@ -40,21 +40,11 @@
             <tr th:each="umaPessoa:" ${todasAsPessoas}>
             <td th:text="${umaPessoa.id}"></td>
             <td th:text="${umaPessoa.nome}"></td>
-            <td>
-                <a 
-                th:href="mailto:'+${umaPessoa.email}"
-                th:text="${umaPessoa.email}"></a>
-            </td>
-            <td>
-                29/03/2001
-            </td>
-            <td>
-                Feminino
-            </td>
-            <td>
-                <a href="editaPessoa.html"><input type="reset" value="Editar"/></a>
-            </td>
-            <td><input type="reset" value="Remover"/></td>
+            <td><a th:href="'mailto:'+${umaPessoa.email}" th:text="${umaPessoa.email}"></a></td>
+            <td th:text="${#temporals.format(umaPessoa.dataNascimento, 'dd/MM/yyyy')}"></td>
+            <td th:text="${umaPessoa.genero}"></td>
+            <td><a th:href="@{/editar/{id}(id=${umaPessoa.id})}">Editar</a></td>
+            <td><a th:href="@{/remover/{id}(id=${umaPessoa.id})}">Remover</a></td>
         </tr>
     </tbody>
 
