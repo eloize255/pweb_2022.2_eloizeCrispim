@@ -36,35 +36,27 @@
             <td>Remover</td>
         </tr>
 
-        <tr>
-            <td>1</td>
-            <td>Eloize</td>
-            <td><a href="mailto:eloize.andrade@alunos.ufersa.edu.br">eloize@gmail.com</a></td>
-            <td>29/03/2001</td>
-            <td>Feminino</td>
-            <td><a href="editaPessoa.html"><input type="reset" value="Editar"/></a></td>
+        <tbody>
+            <tr th:each="umaPessoa:" ${todasAsPessoas}>
+            <td th:text="${umaPessoa.id}"></td>
+            <td th:text="${umaPessoa.nome}"></td>
+            <td>
+                <a 
+                th:href="mailto:'+${umaPessoa.email}"
+                th:text="${umaPessoa.email}"></a>
+            </td>
+            <td>
+                29/03/2001
+            </td>
+            <td>
+                Feminino
+            </td>
+            <td>
+                <a href="editaPessoa.html"><input type="reset" value="Editar"/></a>
+            </td>
             <td><input type="reset" value="Remover"/></td>
         </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Maria</td>
-            <td><a href="mailto:maria@gmail.com">maria@gmail.com</a></td>
-            <td>02/04/2002</td>
-            <td>Feminino</td>
-            <td><a href="editaPessoa.html"><input type="reset" value="Editar"/></a></td>
-            <td><input type="reset" value="Remover"/></td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>João</td>
-            <td><a href="mailto:maria@gmail.com">joao@gmail.com</a></td>
-            <td>12/08/1996</td>
-            <td>Não Informado</td>
-            <td><a href="editaPessoa.html"><input type="reset" value="Editar"/></a></td>
-            <td><input type="reset" value="Remover"/></td>
-        </tr>
+    </tbody>
 
 
 </body>
