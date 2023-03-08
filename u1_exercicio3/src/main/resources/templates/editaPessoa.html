@@ -27,31 +27,31 @@
             <a href="/public/sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">Sobre o site</a>
             <a href="/public/noticias.html" class="w3-bar-item w3-button w3-mobile w3-right">Notícias</a>
           </div>
-    </div>
+    </div> 
 
-    <form method="get" action="adicionadaComSucesso.html">
+    <form th:action="@{/editar/{id}(id-${pessoa.id})}" method="POST" th:object="${pessoa}">
         <h1><b>Formulário para Editar Pessoas:</b><h1>
-            <div class="grid">    
-                <label for="nome"><div>Nome*:</div>
-                    <input type="text" id="nome" placeholder="Nome Completo" required/>
-                </label>
-                <label for="e-mail"><div>e-mail*:</div>
-                    <input type="text" id="e-mail" placeholder="nome@dominio.com" required/>
-                    <small>Nunca Divulgaremos :)</small>
-                </label>
-                <label for="data"><div>Data de Nascimento*:</div>
-                    <input type="date" id="data"/>
-                </label>
-                </div>
+        <div class="grid">    
+        <label for="nome"><div>Nome*:</div>
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" th:field="*{nome}"required/>
+        </label>
+        <label for="e-mail"><div>e-mail*:</div>
+            <input type="text" id="e-mail" placeholder="nome@dominio.com" th:field="*{e-mail}" required/>
+            <small>Nunca Divulgaremos :)</small>
+        </label>
+        <label for="data"><div>Data de Nascimento*:</div>
+            <input type="date" id="data" th:field="*{data}"/>
+        </label>
+        </div>
         <br>
          <Legend>Genêro*:</Legend>
-        <input type="radio" name="sexo" value="Masculino">
+        <input type="radio" name="sexo" value="Masculino" th:field="*{sexo}">
         <label for="Masculino">Masculino</label>
         <br>
-        <input type="radio" name="sexo" value="Feminino">
+        <input type="radio" name="sexo" value="Feminino" th:field="*{sexo}">
         <label for="Feminino">Feminino</label>
         <br>
-        <input type="radio" name="sexo" value="naoinfo">
+        <input type="radio" name="sexo" value="naoinfo" th:field="*{sexo}">
         <label for="naoinfo">Não Informar</label>
         <br>
         <div class="grid">
@@ -59,8 +59,6 @@
             <div> <input type="reset" value="Limpar"/></div> 
           </div>
  </form>
-    
-</body>
     
 </body>
 </html>
